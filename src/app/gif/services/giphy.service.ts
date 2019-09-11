@@ -45,7 +45,7 @@ export class GiphyService {
   }
 
   getGif(id: number) {
-    return this.http.get<any>(this.API_URL + id + '?api_key=' + this.config.getEnv().API_KEY);
+    return this.http.get<any>(this.API_URL + id + '?api_key=' + this.config.getEnv().API_KEY)
   }
 
 }

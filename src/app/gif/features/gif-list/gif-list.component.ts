@@ -66,7 +66,6 @@ export class GifListComponent implements OnInit {
       this.searching = false;
       this.items = [];
       this.getTrendingGifs();
-
     }
   }
 

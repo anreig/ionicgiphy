@@ -26,6 +26,9 @@
         {{ gif.trending_datetime | date: 'dd/MM/yyyy, hh:mm'  }}
       </ion-label>
     </ion-col>
+    <ion-col class="ion-align-items-center">
+      <app-gif-rating [gifRating]="gif?.rating"></app-gif-rating>
+    </ion-col>
   </ion-row>
   <hr />
 

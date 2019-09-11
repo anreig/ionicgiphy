@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { IonicModule } from '@ionic/angular';
+import { GifModule } from './../../gif.module';
 import { GifCardComponent } from './gif-card.component';
+
 
 describe('GifCardComponent', () => {
   let component: GifCardComponent;
@@ -8,9 +10,12 @@ describe('GifCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GifCardComponent ]
+      imports: [
+        IonicModule,
+        GifModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
