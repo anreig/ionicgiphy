@@ -6,7 +6,12 @@ import { NgModule } from '@angular/core';
   imports: [
     CommonModule,
   ],
-  providers: [
-  ],
+  // providers: [
+  //   {
+  //     provide: HTTP_INTERCEPTORS,
+  //     useClass: HttpRequestInterceptorService,
+  //     multi: true
+  //   }
+  // ],
 })
 export class AppCommonModule { }
