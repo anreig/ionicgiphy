@@ -5,7 +5,7 @@ export const LOG_LEVEL = {
   INFO: 1,
   WARN: 2,
   ERROR: 3
-}
+};
 
 @Injectable({
   providedIn: 'root'
