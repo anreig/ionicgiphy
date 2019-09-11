@@ -1,0 +1,27 @@
+.gifTitle {
+  font-size: 1.3rem;
+  margin-top: 8px;
+}
+
+img.picture {
+  min-height: 100px;
+  background-color: rgb(154, 208, 243);
+}
+
+hr {
+  background-color: rgba(0,0,0,0.1);
+}
+
+ion-chip.owner {
+  position: absolute;
+  right: 15px;
+}
+dl {
+  margin-left: 15px;
+}
+dt {
+  font-weight: normal;
+}
+dd {
+  margin-inline-start: 10px;
+}

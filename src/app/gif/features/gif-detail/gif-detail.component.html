@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gifs" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ gif?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addOrRemoveToFavorite()" id="fav-gif">
+        <ion-icon *ngIf="!favorite" name="heart-empty"></ion-icon>
+        <ion-icon *ngIf="favorite" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button id="share-gif" (click)="share(gif)">
+        <ion-icon name="share"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="gif?.id; else loading">
+  <img [src]="'https://media.giphy.com/media/'+ gif?.id +'/giphy.gif'" />
+  <h1 class="ion-padding-horizontal gifTitle">{{ gif.title }}</h1>
+  <ion-row class="ion-padding-horizontal">
+    <ion-col class="ion-align-items-center">
+      <ion-icon name="trending-up" color="dark"></ion-icon>
+      &nbsp;
+      <ion-label>
+        {{ gif.trending_datetime | date: 'dd/MM/yyyy, hh:mm'  }}
+      </ion-label>
+    </ion-col>
+    <ion-col class="ion-align-items-center">
+      <app-gif-rating [gifRating]="gif?.rating"></app-gif-rating>
+    </ion-col>
+  </ion-row>
+  <hr />
+
+  <ion-chip *ngIf="gif?.user" class="owner">
+    <ion-label>{{ gif?.user?.display_name }}</ion-label>
+    <ion-avatar>
+      <img [src]="gif?.user?.avatar_url">
+    </ion-avatar>
+  </ion-chip>
+</ion-content>
+
+<ng-template #loading>
+  <ion-content>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ion-content>
+</ng-template>

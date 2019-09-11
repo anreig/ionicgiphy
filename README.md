@@ -1,14 +1,24 @@
-# IonicGiphyApp
+<div align="center">
+  <br>
+  <img alt="DEV" src="https://blog.phonehouse.es/wp-content/uploads/2018/01/giphy-1-1.gif" width="500px">
+  <h1>Giphy Mobile Hybrid App</h1>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+[![Build Status](https://travis-ci.com/anreig/ionicgiphy.svg?branch=master)](https://travis-ci.com/anreig/ionicgiphy)
+[![CodeFactor](https://www.codefactor.io/repository/github/anreig/ionicgiphy/badge)](https://www.codefactor.io/repository/github/anreig/ionicgiphy)
+
+
+Using the Giphy API (https://developers.giphy.com/docs), I build an app
+that allows the user to search giphys and show details of each.
+
+Technology stack used:
+  - Ionic 5.2.7
+  - Angular 7.0.0
 
 ## Development server
+Run `npm install` to install dependencies.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -18,10 +28,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Improvements TODO
 
-## Further help
+1. Add a lateral Menu [Ionic Menu](https://ionicframework.com/docs/api/menu).
+2. Share Gif functionality [Ionic Native Social Sharing](https://ionicframework.com/docs/native/social-sharing).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
