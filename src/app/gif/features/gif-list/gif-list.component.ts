@@ -38,7 +38,7 @@ export class GifListComponent implements OnInit {
   }
 
 
-  private getTrendingGifs(infiniteScroll?) {
+  getTrendingGifs(infiniteScroll?) {
     const params = {};
     params['limit'] = 10;
     if (infiniteScroll) {

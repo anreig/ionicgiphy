@@ -1,0 +1,8 @@
+{
+  "gifRating": {
+    "g": "All ages",
+    "pg": "Parental require",
+    "pg-13": "Mild sexual",
+    "r": "Strong sexual"
+  }
+}

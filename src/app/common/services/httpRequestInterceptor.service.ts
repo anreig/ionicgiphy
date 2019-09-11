@@ -15,7 +15,7 @@ export class HttpRequestInterceptorService implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
     const updatedRequest = request.clone({
-      headers: request.headers.set('api_key', this.config.getEnv().API_KEY),
+      // headers: request.headers.set('api_key', this.config.getEnv().API_KEY),
       // setHeaders: {
       //   api_key: this.config.getEnv().API_KEY
       // }

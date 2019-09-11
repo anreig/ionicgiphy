@@ -12,7 +12,6 @@ import { LoggerService } from '../../common/services/logger.service';
 export class GiphyService {
 
   API_URL: string;
-  API_COUNT_URL: string;
 
   constructor(
     private config: ConfigService,
@@ -20,7 +19,6 @@ export class GiphyService {
     private logger: LoggerService
   ) {
     this.API_URL = this.config.getEnv().API_URL;
-    this.API_COUNT_URL = this.config.getEnv().API_COUNT_URL;
   }
 
   search(query: string): Observable<Gif[]> {
