@@ -10,7 +10,7 @@ import { GiphyService } from './../../services/giphy.service';
 export class GifListComponent implements OnInit {
 
   searching = false;
-  offset: number = 0;
+  offset = 0;
   items = [];
 
   constructor(
@@ -23,8 +23,8 @@ export class GifListComponent implements OnInit {
 
   doInfinite(infiniteScroll?) {
 
-    const params = {}
-    params['limit'] = 10
+    const params = {};
+    params['limit'] = 10;
     params['offset'] = this.offset += 10;
     this.gifService.trending(params).pipe(
       map(result => {
@@ -39,8 +39,8 @@ export class GifListComponent implements OnInit {
 
 
   private getTrendingGifs(infiniteScroll?) {
-    const params = {}
-    params['limit'] = 10
+    const params = {};
+    params['limit'] = 10;
     if (infiniteScroll) {
       params['offset'] = this.offset += 10;
     }

@@ -24,22 +24,24 @@ export class GiphyService {
   }
 
   search(query: string): Observable<Gif[]> {
-    return this.http.get<any>(this.API_URL + 'search?' + 'q=' + query + '&api_key=' + this.config.getEnv().API_KEY + '&limit=10').pipe(map(items => items.data),
-      catchError((e, _) => {
-        this.logger.error('Error searching Gifs', e)
-        return []
-      })
-    );
+    return this.http.get<any>(this.API_URL + 'search?' + 'q=' + query + '&api_key=' +
+      this.config.getEnv().API_KEY + '&limit=10').pipe(map(items => items.data),
+        catchError((e, _) => {
+          this.logger.error('Error searching Gifs', e);
+          return [];
+        })
+      );
   }
 
   trending(req?: any): Observable<Gif[]> {
     const options = createRequestOption(req);
-    return this.http.get<any>(this.API_URL + 'trending?' + 'api_key=' + this.config.getEnv().API_KEY, { params: options }).pipe(map(items => items.data),
-      catchError((e, _) => {
-        this.logger.error('Error searching Gifs', e)
-        return []
-      })
-    );
+    return this.http.get<any>(this.API_URL + 'trending?' + 'api_key=' +
+      this.config.getEnv().API_KEY, { params: options }).pipe(map(items => items.data),
+        catchError((e, _) => {
+          this.logger.error('Error searching Gifs', e);
+          return [];
+        })
+      );
   }
 
   getGif(id: number) {

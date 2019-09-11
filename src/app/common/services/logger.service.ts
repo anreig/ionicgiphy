@@ -21,27 +21,27 @@ export class LoggerService {
   }
 
   private log(level, ...msg) {
-    msg.reverse()
-    msg.push(`[${level}] [] :: `)
-    msg.reverse()
-    console.log.apply(console, msg)
+    msg.reverse();
+    msg.push(`[${level}] [] :: `);
+    msg.reverse();
+    console.log.apply(console, msg);
   }
 
   trace(...msg) {
-    this.log('TRACE', msg)
+    this.log('TRACE', msg);
   }
 
   info(...msg) {
-    this.log('INFO', msg)
+    this.log('INFO', msg);
 
   }
 
   warn(...msg) {
-    this.log('WARN', msg)
+    this.log('WARN', msg);
   }
 
   error(...msg) {
-    this.log('ERROR', msg)
+    this.log('ERROR', msg);
   }
 
 }

@@ -1,14 +1,17 @@
-# IonicGiphyApp
+[![CodeFactor](https://www.codefactor.io/repository/github/anreig/ionicgiphy/badge)](https://www.codefactor.io/repository/github/anreig/ionicgiphy)
+
+
+# Giphy App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+
+Technology stack used:
+  - Ionic 5.2.7
+  - Angular 7.0.0
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 

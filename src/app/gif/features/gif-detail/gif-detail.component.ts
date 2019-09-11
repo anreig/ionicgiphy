@@ -9,7 +9,7 @@ import { GiphyService } from './../../services/giphy.service';
 })
 export class GifDetailComponent implements OnInit {
 
-  gif: GifDetails
+  gif: GifDetails;
   favorite = false;
 
   constructor(
