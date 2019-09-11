@@ -1,0 +1,4 @@
+<ion-badge *ngIf="gifRating === 'g'" color="success">{{ 'gifRating.' + gifRating | translate }}</ion-badge>
+<ion-badge *ngIf="gifRating === 'pg'" color="medium">{{ 'gifRating.' + gifRating | translate }}</ion-badge>
+<ion-badge *ngIf="gifRating === 'pg-13'" color="warning">{{ 'gifRating.' + gifRating | translate }}</ion-badge>
+<ion-badge *ngIf="gifRating === 'r'" color="danger">{{ 'gifRating.' + gifRating | translate }}</ion-badge>

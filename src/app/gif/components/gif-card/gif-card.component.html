@@ -1,0 +1,11 @@
+<ion-card>
+  <img [src]="'https://media.giphy.com/media/'+ gifItem.id +'/giphy.gif'" />
+  <p class="gifCardName">{{gifItem.user?.display_name}}
+  </p>
+  <ion-card-header>
+    <div class="gifCardBadges">
+      <app-gif-rating [gifRating]="gifItem.rating"></app-gif-rating>
+    </div>
+    <ion-card-title>{{gifItem.title ? gifItem.title: 'NO TITLE'}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
