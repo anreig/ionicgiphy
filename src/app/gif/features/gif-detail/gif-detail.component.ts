@@ -21,7 +21,7 @@ export class GifDetailComponent implements OnInit {
 
   ngOnInit() {
     this.gifService.getGif(this.route.snapshot.params.id).subscribe(gif => {
-      this.gif = gif.data
+      this.gif = gif.data;
     }, error => {
       this.logger.error('Error searching Gifs', error);
     });
@@ -32,7 +32,7 @@ export class GifDetailComponent implements OnInit {
   }
 
   share(gif: Gif) {
-    this.logger.info('Sharing')
+    this.logger.info('Sharing');
   }
 
 }
