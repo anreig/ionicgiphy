@@ -11,6 +11,7 @@ describe('GifListComponent', () => {
   let fixture: ComponentFixture<GifListComponent>;
 
   beforeEach(async(() => {
+
     TestBed.configureTestingModule({
       imports: [
         IonicModule,
@@ -30,5 +31,17 @@ describe('GifListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should NO search', () => {
+    const event = { target: { value: '' } };
+    component.search(event);
+    expect(component.searching).toBe(false);
+  });
+
+  it('should search', () => {
+    const event = { target: { value: 'hola' } };
+    component.search(event);
+    expect(component.searching).toBe(true);
   });
 });
