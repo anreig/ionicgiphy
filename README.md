@@ -22,10 +22,6 @@ Technology stack used:
   - Ionic 5.2.7
   - Angular 7.0.0
 
-## Demo
-
-[Demo](https://anreig.github.io/ionicgiphy/)
-
 ## Development server
 Run `npm install` to install dependencies.
 
