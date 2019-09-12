@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gif-card',
@@ -6,13 +6,10 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./gif-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GifCardComponent implements OnInit {
+export class GifCardComponent {
 
   @Input() gifItem: Gif;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

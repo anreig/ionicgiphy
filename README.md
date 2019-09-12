@@ -11,9 +11,19 @@
 Using the Giphy API (https://developers.giphy.com/docs), I build an app
 that allows the user to search giphys and show details of each.
 
+
+## Screenshots
+![Home Page](/src/assets/img/img1.png?raw=true "Home page")
+![Detatil Page](/src/assets/img/img2.png?raw=true "Detatil Page")
+![Searching Page](/src/assets/img/img3.png?raw=true "Searching Page")
+
 Technology stack used:
   - Ionic 5.2.7
   - Angular 7.0.0
+
+## Demo
+
+[Demo](https://anreig.github.io/ionicgiphy/)
 
 ## Development server
 Run `npm install` to install dependencies.
