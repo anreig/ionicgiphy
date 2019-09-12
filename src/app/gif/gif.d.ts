@@ -2,7 +2,7 @@ declare interface Gif {
   id: number,
   title: string;
   url: string;
-  user: User;
+  user?: User;
   rating: string;
 }
 

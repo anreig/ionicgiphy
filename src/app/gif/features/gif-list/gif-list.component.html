@@ -13,7 +13,7 @@
   <ion-refresher slot="fixed" (ionRefresh)="getTrendingGifs($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  <ion-infinite-scroll (ionInfinite)="getTrendingGifs($event)">
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>

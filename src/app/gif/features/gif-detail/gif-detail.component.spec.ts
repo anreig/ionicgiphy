@@ -13,13 +13,6 @@ describe('GifDetailComponent', () => {
   let component: GifDetailComponent;
   let fixture: ComponentFixture<GifDetailComponent>;
 
-  //   const fakeActivatedRoute = {
-  //     snapshot:
-  //     {
-  //       params: [{ id: 1 }]
-  //     }
-  //   }
-  // } as ActivatedRoute;
   const fakeActivatedRoute = {
     snapshot: {
       params: {
