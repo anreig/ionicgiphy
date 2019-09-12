@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoggerService } from './../../../common/services/logger.service';
 import { GiphyService } from './../../services/giphy.service';
 
 @Component({
@@ -14,11 +15,16 @@ export class GifDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private gifService: GiphyService
+    private gifService: GiphyService,
+    private logger: LoggerService
   ) { }
 
   ngOnInit() {
-    this.gifService.getGif(this.route.snapshot.params.id).subscribe(gif => this.gif = gif.data);
+    this.gifService.getGif(this.route.snapshot.params.id).subscribe(gif => {
+      this.gif = gif.data;
+    }, error => {
+      this.logger.error('Error searching Gifs', error);
+    });
   }
 
   addOrRemoveToFavorite() {
@@ -26,7 +32,7 @@ export class GifDetailComponent implements OnInit {
   }
 
   share(gif: Gif) {
-
+    this.logger.info('Sharing');
   }
 
 }
