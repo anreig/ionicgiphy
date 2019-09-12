@@ -20,5 +20,4 @@ install:
   - npm install
 
 script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-  - npm run testc
+  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox --code-coverage && cat ./coverage/lcov.info | coveralls
