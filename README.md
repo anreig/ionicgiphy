@@ -6,6 +6,7 @@
 
 [![Build Status](https://travis-ci.com/anreig/ionicgiphy.svg?branch=master)](https://travis-ci.com/anreig/ionicgiphy)
 [![CodeFactor](https://www.codefactor.io/repository/github/anreig/ionicgiphy/badge)](https://www.codefactor.io/repository/github/anreig/ionicgiphy)
+[![Coverage Status](https://coveralls.io/repos/github/anreig/ionicgiphy/badge.svg?branch=master)](https://coveralls.io/github/anreig/ionicgiphy?branch=coveralls)
 
 
 Using the Giphy API (https://developers.giphy.com/docs), I build an app
