@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 @NgModule({
   imports: [
     CommonModule,
-  ],
+  ]
   // providers: [
   //   {
   //     provide: HTTP_INTERCEPTORS,
