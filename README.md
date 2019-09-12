@@ -14,9 +14,9 @@ that allows the user to search giphys and show details of each.
 
 
 ## Screenshots
-<img src="https://i.ibb.co/803B006/img2.png" height="500px" alt="Home Page" border="0">
-<img src="https://i.ibb.co/nPyHJnx/img3.png" height="500px" alt="Detail Page" border="0">
-<img src="https://i.ibb.co/8Mmq2gK/img1.png" height="500px" alt="Searching Page" border="0">
+<img src="https://i.ibb.co/8Mmq2gK/img1.png"  height="300px" alt="Home Page" border="0">
+<img src="https://i.ibb.co/803B006/img2.png"  height="300px" alt="Detail Page" border="0">
+<img src="https://i.ibb.co/nPyHJnx/img3.png" height="300px" alt="Searching Page" border="0">
 
 Technology stack used:
   - Ionic 5.2.7
