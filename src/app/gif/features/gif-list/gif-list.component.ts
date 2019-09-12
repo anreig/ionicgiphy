@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { GiphyService } from './../../services/giphy.service';
 
 @Component({
@@ -12,50 +12,28 @@ export class GifListComponent implements OnInit {
   searching = false;
   offset = 0;
   items = [];
+  params = {};
 
   constructor(
     private gifService: GiphyService
   ) { }
 
   ngOnInit() {
-    this.getTrendingGifs();
+    this.params['limit'] = 10;
+    this.getTrendingGifs(this.params);
   }
 
   doInfinite(infiniteScroll?) {
-
-    const params = {};
-    params['limit'] = 10;
-    params['offset'] = this.offset += 10;
-    this.gifService.trending(params).pipe(
-      map(result => {
-        this.items.push(...result);
-        return this.items;
-      })
-    );
+    this.params['offset'] = this.offset += 10;
+    this.getTrendingGifs(this.params);
     infiniteScroll.target.complete();
-
-
   }
 
-
-  getTrendingGifs(infiniteScroll?) {
-    const params = {};
-    params['limit'] = 10;
-    if (infiniteScroll) {
-      params['offset'] = this.offset += 10;
-    }
-
-    this.gifService.trending(params).pipe(
-      map(result => {
-        this.items.push(...result);
-        return this.items;
-      }),
-      tap(() => {
-        if (infiniteScroll) {
-          infiniteScroll.target.complete();
-        }
-      })
-    ).subscribe();
+  getTrendingGifs(params?) {
+    this.gifService.trending(params).pipe(map(result => {
+      this.items.push(...result);
+      return this.items;
+    })).subscribe();
   }
 
   search(event) {
